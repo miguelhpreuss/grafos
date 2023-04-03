@@ -7,8 +7,8 @@ char fig[200][200] = {};
 
 int n, m, q = 0;
 
-bool in(int i, int j){
-    return (i >= 0 && i < n && j >=0 && j < m);
+bool in(int i, int j) {
+    return (i >= 0 && i < n && j >= 0 && j < m);
 }
 
 void ff(int i, int j) {
@@ -19,11 +19,11 @@ void ff(int i, int j) {
     fig[i][j] = 1;
     q++;
     ff(i-1, j-1); ff(i-1, j); ff(i-1, j+1);
-    ff(i, j-1);           ff(i, j+1);
+    ff(i,   j-1);             ff(i,   j+1);
     ff(i+1, j-1); ff(i+1, j); ff(i+1, j+1);
 }
 
-int main(){
+int main () {
     cin >> n >> m;
 
     int x, y, k;
